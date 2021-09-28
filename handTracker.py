@@ -1,9 +1,10 @@
 import cv2
-import mediapipe
+import mediapipe #Detect and track hand(landmarks) movements
 import numpy
-import autopy
+import autopy # AutoPy is a simple, cross-platform GUI automation library. Has functions for controlling Keyboard, Mouse, Finding Colors, bitmaps on-screen, displaying alerts
+              # Here AutoPy Convert hand movement to mouse movements
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) #Captures Webcam
 initHand = mediapipe.solutions.hands  # Initializing mediapipe
 # Object of mediapipe with "arguments for the hands module"
 mainHand = initHand.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.8)
